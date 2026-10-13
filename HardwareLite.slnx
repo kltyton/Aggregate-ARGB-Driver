@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/HardwareLite.Core/HardwareLite.Core.csproj" />
+    <Project Path="src/HardwareLite.Service/HardwareLite.Service.csproj" />
+    <Project Path="src/HardwareLite/HardwareLite.csproj" />
+  </Folder>
+  <Folder Name="/firmware/">
+    <Project Path="firmware/prime_slc/tools/D21xPackage/D21xPackage.csproj" />
+  </Folder>
+</Solution>

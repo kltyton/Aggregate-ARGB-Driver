@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+    <AssemblyName>HardwareLite</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AntdUI" Version="2.4.12" />
+    <ProjectReference Include="../HardwareLite.Core/HardwareLite.Core.csproj" />
+    <Compile Remove="Configuration/**/*.cs;Display/**/*.cs;Devices/**/*.cs;Monitoring/**/*.cs;Runtime/Autostart.cs;Runtime/DeviceController.cs;Runtime/DeviceConflicts.cs;Runtime/DeviceStatus.cs" />
+    <Content Include="../../docs/licenses/*.txt" Link="licenses/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="PublishCurrentRuntimeAssets" AfterTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <ResolvedFileToPublish Update="@(ResolvedFileToPublish)" CopyToPublishDirectory="Always" />
+    </ItemGroup>
+  </Target>
+</Project>

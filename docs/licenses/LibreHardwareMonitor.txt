@@ -1,0 +1,8 @@
+LibreHardwareMonitorLib 0.9.6
+Copyright LibreHardwareMonitor contributors and Michael Moller.
+License: Mozilla Public License 2.0 (MPL-2.0)
+Unmodified upstream source: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/tree/v0.9.6
+License text: https://www.mozilla.org/MPL/2.0/
+
+Dependencies retain their respective licenses as identified in their NuGet packages.
+PawnIO is an installed system dependency; its installer and binaries are not bundled.

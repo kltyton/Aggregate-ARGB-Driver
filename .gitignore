@@ -1,0 +1,30 @@
+﻿# Build outputs and local runtime data
+**/bin/
+**/obj/
+/dist/
+**/config/
+**/logs/
+**/TestResults/
+**/BenchmarkDotNet.Artifacts/
+
+# Editor state
+.vs/
+**/.idea/
+*.user
+*.suo
+
+# Local firmware inputs and generated packages
+*.bin
+*.elf
+*.itb
+*.map
+*.dmp
+*.tmp
+
+# Credentials and private environment files
+.env
+.env.*
+credentials.local.json
+*.pfx
+*.p12
+*.key

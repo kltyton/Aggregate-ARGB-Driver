@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>HardwareLite.Core</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+    <Using Include="System.Drawing" />
+    <PackageReference Include="NAudio.Wasapi" Version="2.2.1" />
+    <Compile Include="../HardwareLite/Configuration/**/*.cs" Link="Configuration/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../HardwareLite/Display/**/*.cs" Link="Display/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../HardwareLite/Monitoring/SensorSnapshot.cs" Link="Monitoring/SensorSnapshot.cs" />
+    <Compile Include="../HardwareLite/Runtime/DeviceStatus.cs" Link="Runtime/DeviceStatus.cs" />
+    <InternalsVisibleTo Include="HardwareLite" />
+    <InternalsVisibleTo Include="HardwareLite.Service" />
+  </ItemGroup>
+</Project>
